@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @classment.name %>
+</p>
+
+<p>
+  <strong>Mobileno:</strong>
+  <%= @classment.mobileno %>
+</p>
+
+<p>
+  <strong>Born:</strong>
+  <%= @classment.born %>
+</p>
+
+<%= link_to 'Edit', edit_classment_path(@classment) %> |
+<%= link_to 'Back', classments_path %>

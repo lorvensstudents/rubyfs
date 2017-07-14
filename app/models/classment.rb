@@ -1,0 +1,2 @@
+class Classment < ApplicationRecord
+end

@@ -1,0 +1,32 @@
+<%= form_with(model: classment, local: true) do |form| %>
+  <% if classment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(classment.errors.count, "error") %> prohibited this classment from being saved:</h2>
+
+      <ul>
+      <% classment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :classment_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mobileno %>
+    <%= form.text_field :mobileno, id: :classment_mobileno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :born %>
+    <%= form.text_field :born, id: :classment_born %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
